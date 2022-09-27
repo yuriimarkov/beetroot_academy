@@ -2,13 +2,12 @@
 html {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
-    font-weight: 400px;
+    font-weight: 400;
 }
 
 h2{
-    font-weight: bold;
     font-size: 34px;
-    padding-top: 100px
+    padding-top: 100px;
 }
 
 h3 {
@@ -59,7 +58,7 @@ a {
 }
 
 .img-holder>img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .about-me {
