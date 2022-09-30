@@ -290,7 +290,77 @@ img {
     padding-top: 5px;
 }
 
+
+
 .design-section.marketers .text-col{
     padding-right: 174px;
 }
 
+.marketers {
+    margin-bottom: 100px;
+}
+
+
+.footer {
+    border-top: 1px solid rgba(188, 208, 229, 0.496913);
+}
+
+
+.footer .container {
+    overflow: hidden;
+    padding: 70px 0;
+}
+
+.footer .img-holder {
+    float: left;
+}
+
+.footer h3 {
+    margin: 0;
+}
+
+.footer-nav {
+    float: left;
+    padding-left: 130px;
+}
+
+.footer-list {
+    list-style: none;
+    display: inline;
+    margin: 0;
+}
+
+.footer-list li {
+    padding-top: 15px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #544837;
+}
+
+.footer-form {
+    float: right;
+}
+
+.footer-form h3 {
+    max-width: 280px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    padding-bottom: 25px;
+}
+
+.footer-form .btn-holder {
+    padding: 25px 0;
+}
+
+.footer-form .footer-input {
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    border: 1px solid #BCD0E5;
+    border-radius: 4px;
+    color: #BCD0E5;
+    font-size: 16px;
+}
