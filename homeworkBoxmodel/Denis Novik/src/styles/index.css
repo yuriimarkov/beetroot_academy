@@ -164,6 +164,7 @@ img {
 .btn {
     background: #070707;
     border-radius: 22px;
+    border-style: none;
     color: white;
     padding: 10px 16px;
     line-height: 25px;
