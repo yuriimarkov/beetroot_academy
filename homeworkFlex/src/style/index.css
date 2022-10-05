@@ -67,6 +67,7 @@ img {
     transition: all ease-in-out 0.3s;
 }
 
+
 .btn.btn-small {
     width: 110px;
     padding: 9px;
@@ -108,13 +109,15 @@ img {
 }
 
 .header .btn-list {
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0 -16px;
 }
 
 .header .btn-item {
-    display: inline-block;
+    display: flex;
     padding: 0 16px;
     margin-right: -3px;
 }
@@ -336,7 +339,9 @@ img {
 }
 
 .footer-form {
-    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .footer-form h3 {
