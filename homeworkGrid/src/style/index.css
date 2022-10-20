@@ -1,0 +1,248 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+
+h1 {
+    color: #000;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Delius Unicase', cursive;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: 0.05em;
+    color: #000;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.container {
+    width: 1170px;
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.gallery {
+    display: grid;
+    gap: 30px;
+}
+
+.cities .gallery {
+    padding-bottom: 120px;
+    grid-template-areas:
+    "first-img second-img second-img"
+    "third-img third-img fourth-img"
+    "fifth-img sixth-img sixth-img";
+}
+
+.img-holder {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.img-holder:hover .btn-list {
+    opacity: 1;
+}
+
+.img-holder:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%);
+    transition: background-color ease-in-out 0.3s;
+}
+
+.img-holder:hover::before {
+    background-color: linear-gradient(#241F24 1.04%, rgba(91, 91, 91, 0.26) 6.99%, rgba(187, 186, 192, 0) 12.29%);
+    transform: rotateX(90deg);
+}
+
+.img-holder img {
+    display: block;
+    object-fit: cover;
+    height: 100%;
+}
+
+.img-holder .gallery-title {
+    font-weight: 500;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.img-holder .gallery-subtitle {
+    color: #E0E0E0;
+    font-weight: 400;
+    bottom: 20px;
+    right: 20px;
+    position: absolute;
+}
+
+.btn-list {
+    list-style: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    transition: opacity ease-in-out 0.3s;
+    opacity: 0;
+}
+
+.btn-list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(224, 224, 224, 0.5);
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    transition: background-color ease-in-out 0.3s;
+}
+
+.btn-list a:hover{
+    background-color: #E0E0E0;
+}
+
+.btn-list a .icon {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #E0E0E0;
+}
+
+.nature .gallery {
+    padding-bottom: 120px;
+    grid-template-areas: 
+    "seventh-img eighth-img eighth-img "
+    "ninth-img ninth-img tenth-img "
+    "eleventh-img eleventh-img twelfth-img ";
+}
+
+.people .gallery {
+    padding-bottom: 120px;
+    grid-template-areas: 
+    "thirteenth-img  fourteenth-img fifteenth-img"
+    "sixteenth-img  fourteenth-img seventeenth-img"
+    "eighteenth-img  nineteenth-img seventeenth-img"
+    "eighteenth-img  twentieth-img twentieth-img"
+    "twenty-first-img twenty-first-img twenty-second-img"
+    ;
+}
+
+
+.gallery-item-1 {
+    grid-area: first-img;
+}
+
+.gallery-item-2 {
+    grid-area: second-img;
+}
+
+.gallery-item-3 {
+    grid-area: third-img;
+}
+
+.gallery-item-4 {
+    grid-area: fourth-img;
+}
+
+.gallery-item-5 {
+    grid-area: fifth-img;
+}
+
+.gallery-item-6 {
+    grid-area: sixth-img;
+}
+
+.gallery-item-7 {
+    grid-area: seventh-img;
+}
+
+.gallery-item-8 {
+    grid-area: eighth-img;
+}
+
+.gallery-item-9{
+    grid-area: ninth-img;
+}
+
+.gallery-item-10 {
+    grid-area: tenth-img;
+}
+
+.gallery-item-11 {
+    grid-area: eleventh-img;
+}
+
+.gallery-item-12 {
+    grid-area: twelfth-img;
+}
+
+.gallery-item-13 {
+    grid-area: thirteenth-img;
+}
+
+.gallery-item-14 {
+    grid-area: fourteenth-img;
+}
+
+.gallery-item-15 {
+    grid-area: fifteenth-img;
+}
+
+.gallery-item-16 {
+    grid-area: sixteenth-img;
+}
+
+.gallery-item-17 {
+    grid-area: seventeenth-img;
+}
+
+.gallery-item-18 {
+    grid-area: eighteenth-img;
+}
+
+.gallery-item-19 {
+    grid-area: nineteenth-img;
+}
+
+.gallery-item-20 {
+    grid-area: twentieth-img;
+}
+
+.gallery-item-21 {
+    grid-area: twenty-first-img;
+}
+
+.gallery-item-22 {
+    grid-area: twenty-second-img;
+}
+
+

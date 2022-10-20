@@ -141,7 +141,7 @@ img {
 }
 
 .nav-item active,
-.hav-link:hover {
+.nav-link:hover {
     color: #FF9900;
 }
 
