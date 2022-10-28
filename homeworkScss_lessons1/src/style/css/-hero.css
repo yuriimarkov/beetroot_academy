@@ -1,0 +1,37 @@
+.hero-section {
+  padding: 70px 0 0;
+  margin-bottom: 100px;
+}
+.hero-section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero-section .hero-text {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 56px;
+}
+.hero-section .hero-text .text-holder {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0 0 20px;
+}
+.hero-section .img-holder {
+  max-width: 644px;
+  width: 50%;
+}

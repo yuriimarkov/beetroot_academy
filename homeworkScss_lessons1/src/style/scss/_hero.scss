@@ -1,0 +1,28 @@
+.hero-section {
+    padding: 70px 0 0;
+    margin-bottom: 100px;
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .hero-text {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding-right: 56px;
+
+        .text-holder {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            margin: 0 0 20px;
+        }
+    }
+    .img-holder{
+        max-width: 644px;
+        width: 50%;
+    }
+}

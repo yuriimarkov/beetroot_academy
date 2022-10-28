@@ -1,0 +1,26 @@
+.design-section {
+    margin-bottom: 100px;
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .img-holder {
+        width: 50%;
+    }
+
+    .text-col {
+        width: 50%;
+        padding: 20px 113px 0 0;
+
+        &h2 {
+            margin-bottom: 20px;
+        }
+    }
+
+    .text-holder strong {
+        margin-bottom: 10px;
+        display: block;
+    }
+}
