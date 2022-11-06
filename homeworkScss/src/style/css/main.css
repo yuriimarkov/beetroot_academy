@@ -1,4 +1,13 @@
 @charset "UTF-8";
+/* mixin usage */
+/*--------------------------------
+	Responsive ratio
+	Used for creating scalable elements that maintain the same ratio
+	example:
+	.element {
+		@include responsive-ratio(400, 300);
+	}
+*/
 *,
 *:before,
 *:after {
@@ -12,24 +21,23 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
+  color: #2F281E;
 }
 
 a {
-  -webkit-transition: color ease-in-out 0.3s;
-  transition: color ease-in-out 0.3s;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 h1 {
   font-size: 44px;
   line-height: 54px;
-  color: #2f281e;
   margin: 0 0 30px;
 }
 
 h2 {
   font-size: 36px;
   line-height: 44px;
-  color: #2f281e;
   margin: 0 0 50px;
 }
 
@@ -37,10 +45,10 @@ h3 {
   font-weight: 600;
   font-size: 22px;
   line-height: 27px;
-  color: #2f281e;
 }
 
 p {
+  color: #544837;
   margin: 0 0 40px;
 }
 
@@ -53,51 +61,6 @@ img {
   max-width: 1230px;
   padding: 0 15px;
   margin: 0 auto;
-}
-
-.btn {
-  background: #FF9900;
-  border-radius: 4px;
-  font-weight: 700;
-  font-family: "Poppins", sans-serif;
-  text-align: center;
-  color: #FFFFFF;
-  padding: 12px;
-  display: inline-block;
-  width: 180px;
-  text-decoration: none;
-  border: 1px solid #FF9900;
-  -webkit-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
-}
-
-.btn.btn-small {
-  width: 110px;
-  padding: 9px;
-  font-weight: 600;
-  font-family: "Montserrat";
-}
-
-.btn.btn-transparent {
-  width: 110px;
-  padding: 9px;
-  background-color: #FFFFFF;
-  border-color: #8cd0e5;
-  color: #2f281e;
-  font-weight: 600;
-  font-family: "Montserrat";
-}
-
-.btn.btn-transparent:hover {
-  border: 1px solid #ff9900;
-  background-color: #ff9900;
-  color: #fff;
-}
-
-.btn:hover {
-  background-color: #FFFFFF;
-  border-color: #8cd0e5;
-  color: #2f281e;
 }
 
 .nav {
@@ -119,14 +82,14 @@ img {
   padding: 0 10px;
 }
 
-.nav-link {
+.nav-link, .footer-list .footer-link {
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
-  color: #2f281e;
+  color: #2F281E;
   text-decoration: none;
 }
-.nav-link.active, .nav-link:hover {
+.nav-link.active, .footer-list .active.footer-link, .nav-link:hover, .footer-list .footer-link:hover {
   color: #FF9900;
 }
 
@@ -136,38 +99,38 @@ img {
   font-weight: 700;
   font-family: "Poppins", sans-serif;
   text-align: center;
-  color: #FFFFFF;
+  color: #fff;
   padding: 12px;
   display: inline-block;
   width: 180px;
   text-decoration: none;
   border: 1px solid #FF9900;
-  -webkit-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .btn:hover {
-  background-color: #FFFFFF;
+  background-color: #fff;
   border-color: #8cd0e5;
-  color: #2f281e;
+  color: #2F281E;
 }
 .btn.btn-small {
   width: 110px;
   padding: 9px;
   font-weight: 600;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
 }
 .btn.btn-transparent {
   width: 110px;
   padding: 9px;
-  background-color: #FFFFFF;
+  background-color: #fff;
   border-color: #8cd0e5;
-  color: #2f281e;
+  color: #2F281E;
   font-weight: 600;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
 }
 .btn.btn-transparent:hover {
-  border: 1px solid #ff9900;
-  background-color: #ff9900;
+  border: 1px solid #FF9900;
+  background-color: #FF9900;
   color: #fff;
 }
 
@@ -304,12 +267,8 @@ img {
   width: 50%;
   padding: 20px 113px 0 0;
 }
-.design-section .text-colh2 {
+.design-section .text-col h2 {
   margin-bottom: 20px;
-}
-.design-section .text-holder strong {
-  margin-bottom: 10px;
-  display: block;
 }
 
 .product-manager .container {
@@ -327,15 +286,10 @@ img {
   padding-bottom: 30px;
   position: relative;
 }
-.product-manager .product-item span {
-  display: inline-block;
-  width: calc(100% - 35px);
-  padding-left: 65px;
-}
 .product-manager .product-item::before {
   content: "✓";
   display: inline-block;
-  background-color: #ff9900;
+  background-color: #FF9900;
   border-radius: 10px;
   width: 35px;
   height: 35px;
@@ -348,6 +302,11 @@ img {
   left: 18px;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
+}
+.product-manager .product-item span {
+  display: inline-block;
+  width: calc(100% - 35px);
+  padding-left: 65px;
 }
 
 .marketers {
@@ -405,21 +364,22 @@ img {
   height: 50px;
   padding: 15px;
   margin-bottom: 25px;
-  border: 1px solid #BCD0E5;
+  border: 1px solid #8cd0e5;
   border-radius: 4px;
-  color: #BCD0E5;
+  color: #8cd0e5;
   font-size: 16px;
 }
 
 .footer-nav {
   padding-right: 110px;
 }
-.footer-nav .footer-list {
+
+.footer-list {
   list-style: none;
   display: inline;
   margin: 0;
 }
-.footer-nav .footer-list .footer-link {
+.footer-list .footer-link {
   padding-top: 15px;
   text-decoration: none;
   color: #544837;

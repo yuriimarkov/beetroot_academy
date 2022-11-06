@@ -1,0 +1,47 @@
+.btn {
+    background: $orange;
+    border-radius: 4px;
+    font-weight: 700;
+    font-family: $btn-font;
+    text-align: center;
+    color: $white;
+    padding: 12px;
+    display: inline-block;
+    width: 180px;
+    text-decoration: none;
+    border: 1px solid $orange;
+    @include animate(all);
+
+
+    &:hover {
+        background-color: $white;
+        border-color: $azure;
+        color: $black;
+    }
+
+    &.btn-small {
+        width: 110px;
+        padding: 9px;
+        font-weight: 600;
+        font-family: $default-font;
+    }
+
+    &.btn-transparent {
+        width: 110px;
+        padding: 9px;
+        background-color: $white;
+        border-color: $azure;
+        color: $black;
+        font-weight: 600;
+        font-family: $default-font;
+
+        &:hover {
+            border: 1px solid $orange;
+            background-color: $orange;
+            color: $white;
+        }
+    }
+}
+
+
+

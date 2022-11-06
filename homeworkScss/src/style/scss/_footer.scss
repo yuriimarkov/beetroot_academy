@@ -1,5 +1,5 @@
 .footer {
-    border-top: 1px solid rgba(188, 208, 229, 0.496913);
+    border-top: 1px solid $footer-border-color;
 
     .nav-heading {
         margin: 0;
@@ -40,9 +40,9 @@
             height: 50px;
             padding: 15px;
             margin-bottom: 25px;
-            border: 1px solid #BCD0E5;
+            border: 1px solid $azure;
             border-radius: 4px;
-            color: #BCD0E5;
+            color: $azure;
             font-size: 16px;
         }        
     }
@@ -50,15 +50,17 @@
     .footer-nav {
         padding-right: 110px;
         
+    }
         .footer-list {
             list-style: none;
             display: inline;
             margin: 0;
 
             .footer-link {
+                @extend .nav-link;
+
                 padding-top: 15px;
                 text-decoration: none;
-                color: #544837;
+                color: $light-black;
             }
         }
-    }

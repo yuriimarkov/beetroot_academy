@@ -44,12 +44,13 @@ a {
     width: 100%;
     background-color: #007bff;
     border-radius: 6px;
-    border: none;
+    border: 1px solid #E4E4E4;
     color: #ffffff;
     font-weight: 500;
     text-align: center;
     padding: 8px 10px;
-    margin-bottom: 22px
+    margin-bottom: 22px;
+    cursor: pointer;
   }
 
 
@@ -65,19 +66,22 @@ a {
 }
 
 .forms .container {
-    max-width: 570px;
-    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
     text-align: left;
 }
 
 .forms {
     padding: 55px 135px;
-    width: 100%;
 }
 
 .form {
+    max-width: 570px;;
+    width: 100%;
     padding: 35px 35px 16px 35px;
     background-color: #fff;
+    border-radius: 6px;
+    margin-left: 30px;
 }
 
 .row {
@@ -102,7 +106,7 @@ a {
     padding: 7px 0;
     outline: none;
     background-color: transparent;
-    border: 1px solid #545454;
+    border: 1px solid #E4E4E4;
     border-radius: 6px;
     width: 100%;
 }
@@ -142,12 +146,13 @@ a {
     border-color: #007bff;
     background-color: #007bff;
   }
-.custom-radio label {
+.custom-radio .label {
     display: block;
     position: relative;
     padding-left: 28px;
+    color: rgba(0, 0, 0, 0.7);
   }
-.custom-radio label:before {
+.custom-radio .label:before {
     content: "";
     position: absolute;
     top: 50%;
@@ -159,7 +164,7 @@ a {
     border: 1px solid #545454;
     transition: border ease-in-out 0.2s;
   }
-.custom-radio label:after {
+.custom-radio .label:after {
     content: "";
     position: absolute;
     top: 50%;
@@ -198,8 +203,73 @@ a {
 .list-link {
     text-decoration: none;
     font-weight: 500;
+    color: #007BFF;
 }
 
 .list-link:hover {
     color: #007BFF;
 }
+
+.img-holder {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.row .file-input {
+    position: fixed;
+    top: -1000vh;
+    left: -1000vw;
+}
+
+.file-label {
+    display: block;
+    position: relative;
+    background-color: #FFFFFF;
+    border: 1px solid #E4E4E4;
+    border-radius: 6px;
+    width: 136px;
+    height: 28px;
+    margin-bottom: 9px;
+}
+
+.file-label .icon {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    width: 12px;
+    height: 13px;
+    transform: translateY(-50%);
+    color: #969696;
+    border-radius: 2px;
+}
+
+.reset-holder {
+    padding-left: 10px;
+}
+
+.reset-holder button {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: #FFFFFF;
+    border: 1px solid #E4E4E4;
+    border-radius: 6px;
+}
+
+.reset-holder button .icon-trash {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #969696; 
+}
+
+
+.update {
+    width: 30%;
+}
+

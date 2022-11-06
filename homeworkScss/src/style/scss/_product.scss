@@ -1,0 +1,40 @@
+.product-manager {
+    
+    .container {
+        flex-direction: row-reverse;
+    }
+
+    .product-lists {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .product-item {
+        padding-bottom: 30px;
+        position: relative;
+
+        &::before {
+            content: '\2713';
+            display: inline-block;
+            background-color: $orange;
+            border-radius: 10px;
+            width: 35px;
+            height: 35px;
+            margin-top: 7px;
+            text-align: center;
+            line-height: 35px;
+            color:#FFFFFF;
+            position: absolute;
+            top: 0;
+            left: 18px;
+            transform: translate(-50%)
+        }
+
+        span {
+            display: inline-block;
+            width: calc(100% - 35px);
+            padding-left: 65px;
+        }
+    }
+}
