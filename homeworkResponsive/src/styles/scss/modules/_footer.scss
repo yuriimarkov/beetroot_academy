@@ -21,14 +21,23 @@
 
 .contact {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+
+    @include media ('>=1024px'){
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
     .contact-title {
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 42px;
-    letter-spacing: 0.05em;
-    margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: 0.05em;
+    }
+
+    .tel {
+        padding: 30px 0 15px;
     }
     
 }

@@ -1,6 +1,12 @@
 .latest-post {
     margin-bottom: 20px;
 
+    .content-desc {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 0;
+     }
+
     .heading-holder {
         
         @include media('>=768px') {
@@ -8,6 +14,11 @@
             justify-content: space-between;
           }
     }
+
+    .content-inner {
+      @include media('>=1024px') {
+          margin: 0 -15px;
+        }
 }
 
 .heading-link {
@@ -36,11 +47,6 @@
         font-size: 11px;
     }
 }
-
-.content-inner {
-    @include media('>=1024px') {
-        margin: 0 -15px;
-      }
 
 .item {
     @include media('>=768px') {
