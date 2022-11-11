@@ -1,0 +1,48 @@
+
+.nav {
+    &.active {
+	transform: translateX(0);
+} 
+
+.nav-list {
+    display: flex;
+}
+
+.nav-item {
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: $black;
+}
+
+
+.nav-btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index:2;
+    overflow: hidden;
+
+    span {
+        width: 30px;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #222222;
+        transition: all 0.5s;
+
+        &:nth-of-type(2) {
+            top: calc(50% - 5px);
+        }
+
+        &:nth-of-type(3) {
+            top: calc(50% + 5px);
+        }  
+    } 
+}
+}

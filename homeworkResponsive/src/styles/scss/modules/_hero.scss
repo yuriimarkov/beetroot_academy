@@ -1,0 +1,27 @@
+.hero {
+    background-image: url(/src/img/bg.jpg);
+    background-position: 50% 45%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    margin: 60px 0 70px;
+
+    .title {
+        padding: 70px 10px 0;
+        
+        @include media('>=768px') {
+            font-size: 36px;;
+            padding: 30px 34px;
+            width: 80%;
+        }
+    
+        @include media('>=1024px') {
+            font-size: 48px;
+            padding: 100px 134px;
+            width: 70%;
+        }
+    }
+}
+
+
