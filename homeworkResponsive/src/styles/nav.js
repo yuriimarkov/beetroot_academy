@@ -1,7 +1,7 @@
-let navBtn = document.querySelector('.nav-btn');
-let nav = document.querySelector('.nav');
+const navBtn = document.querySelector('.nav-btn');
+const header = document.querySelector('.header');
+const searchBtn  = document.querySelector('.js-search-btn');
 
-navBtn.addEventListener('click', function(){
-	navBtn.classList.toggle('active');
-	nav.classList.toggle('active');
-})
+navBtn.addEventListener('click', () => {
+    header.classList.toggle('active');
+});

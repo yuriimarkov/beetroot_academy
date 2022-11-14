@@ -8,6 +8,16 @@
      }
 
     .heading-holder {
+      margin-bottom: 50px;
+      .title {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: 0.05em;
+        text-align: start;
+        padding: 0;
+        margin: 0;
+        }
         
         @include media('>=768px') {
             display: flex;
@@ -24,20 +34,10 @@
 .heading-link {
     display: flex;
     align-items: center;
-
     @include media ('>=768px'){
         justify-content: center;
     }
 
-    .title {
-        font-weight: 600;
-        font-size: 28px;
-        line-height: 36px;
-        letter-spacing: 0.05em;
-        text-align: start;
-        padding: 0;
-        margin: 0;
-        }
     .subtitle {
         color: $grey;
         padding-right: 10px;
@@ -54,6 +54,7 @@
         flex-wrap: wrap;
         gap: 20px;
         width: 100%;
+        margin-bottom: 30px;  
       }
   
     @include media('>=1024px') {

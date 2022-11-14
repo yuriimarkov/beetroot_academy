@@ -1,36 +1,28 @@
 .most-post {
     margin-bottom: 90px;
 
+.content-inner {
+  @include media('>=768px') {
+    gap: 20px;
+  }
+}
+
 .item {
   margin-bottom: 50px;
 
   @include media('>=768px') {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    width: 100%;
+    flex-direction: column;  
+    width: calc(50% - 10px);
   }
     
   @include media('>=1024px') {
   flex-direction: column;
-  gap: 0;
-  width: calc(50% - 10px);
-  }
-
-  &:nth-child(even) {
-    flex-direction: row-reverse;
-    
-    @include media('>=1024px') {
-      flex-direction: column;
-    }
   }
 }
 .content,
 .img-holder {
-  @include media('>=768px') {
-  width: calc(50% - 10px);
-  }
-      
   @include media('>=1024px') {
     width: 100%;
   }
@@ -43,6 +35,15 @@
 }
 
 .heading-holder {
+  margin-bottom: 50px;
+  
+  .title {
+    font-size: 28px;
+    @include media ('>=768px') {
+      line-height: 166%;
+    }
+    
+  }
         
  @include media('>=768px') {
   margin-bottom: 46px;
@@ -50,7 +51,6 @@
   justify-content: space-between;
   }
 }
-
 .heading-link {
   display: flex;
   align-items: center;
@@ -62,12 +62,21 @@
 
 .content-title {
   font-weight: 600;
-  font-size: 28px;
-  line-height: 36px;
-  letter-spacing: 0.05em;
+  font-size: 22px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
   text-align: start;
   padding-bottom: 20px;
   margin: 0;
+
+  @include media ('>=768px'){
+    font-size: 24px;
+    line-height: 166%;  
+  }
+
+  @include media ('>=1024px') {
+    font-size: 24px;
+  }
 }
 
 .subtitle {
@@ -80,11 +89,6 @@
     font-size: 11px;
   }
 
-.content-inner {
-  @include media('>=1024px') {
-    gap: 20px;
-  }
-}
 .button-holder {
   display: flex;
   align-items: center;
