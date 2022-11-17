@@ -1,0 +1,11 @@
+.header {
+    border-bottom: 1px solid $semi-grey;
+    text-align: center;
+
+    @include media ('>=1024px') {
+        text-align: left;
+    }
+    .logo-holder {
+        padding: 22px 0;
+    }
+}

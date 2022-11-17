@@ -1,0 +1,235 @@
+/* mixin usage */
+/*--------------------------------
+	Responsive ratio
+	Used for creating scalable elements that maintain the same ratio
+	example:
+	.element {
+		@include responsive-ratio(400, 300);
+	}
+*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #16133D;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 21px;
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+
+p {
+  line-height: 28px;
+  margin: 0 0 30px;
+}
+
+a {
+  text-decoration: none;
+  line-height: 19px;
+  font-weight: 600;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  border-bottom: 1px solid #EFEEF3;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .header {
+    text-align: left;
+  }
+}
+.header .logo-holder {
+  padding: 22px 0;
+}
+
+.services {
+  padding: 50px 0;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .services {
+    padding: 100px 0;
+    text-align: left;
+  }
+}
+.services .heading-holder {
+  margin-bottom: 40px;
+}
+.services .heading-holder .sub-title {
+  display: block;
+  color: #7690A8;
+  padding-bottom: 15px;
+}
+.services .cards {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .services .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 20px;
+  }
+  .services .cards:last-child {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  .services .cards {
+    gap: 30px;
+  }
+}
+.services .item {
+  width: 100%;
+  border: 1px solid #E5EAF4;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+@media (min-width: 768px) {
+  .services .item {
+    width: calc(50% - 10px);
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .services .item {
+    width: calc(33.3333333333% - 20px);
+    padding: 40px;
+  }
+}
+.services .item:last-child {
+  margin-bottom: 0;
+}
+.services .item:hover {
+  border: 1px solid #3DB370;
+}
+.services .icon-holder {
+  margin-bottom: 30px;
+}
+.services .icon {
+  background-image: url("/src/img/icons.svg");
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  background-position: -8px -7px;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  border: 1px solid rgba(21, 101, 216, 0.1);
+  border-radius: 16px;
+}
+.services .icon:hover {
+  background-position: -8px -63px;
+}
+.services .icon.icon-building {
+  background-position: -97px -7px;
+}
+.services .icon.icon-building:hover {
+  background-position: -97px -63px;
+}
+.services .icon.phone {
+  background-position: -177px -7px;
+}
+.services .icon.phone:hover {
+  background-position: -177px -63px;
+}
+.services .item-title {
+  margin-bottom: 15px;
+}
+.services .item-link {
+  color: #3DB370;
+}
+
+.footer {
+  background-color: #16133D;
+  padding: 20px 0;
+}
+@media (min-width: 768px) {
+  .footer {
+    padding: 40px 0;
+  }
+}
+.footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (min-width: 1024px) {
+  .footer .container {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+.footer .logo-holder {
+  padding-bottom: 20px;
+}
+@media (min-width: 1024px) {
+  .footer .logo-holder {
+    padding-bottom: 40px;
+  }
+}
+.footer .social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+.footer .social-link {
+  background-color: #EFEEF3;
+  border-radius: 5px;
+  color: #0D0D0D;
+  padding: 10px;
+}
+.footer .social-link:hover {
+  color: #3DB370;
+}
