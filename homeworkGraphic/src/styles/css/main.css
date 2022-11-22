@@ -154,9 +154,8 @@ ul {
 .footer .text-holder {
   text-align: center;
 }
-
 @media (min-width: 1024px) {
-  .footer-inner {
+  .footer .footer-inner {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -168,13 +167,12 @@ ul {
             align-items: center;
   }
 }
-
-.contact {
+.footer .contact {
   text-align: center;
   margin-bottom: 20px;
 }
 @media (min-width: 1024px) {
-  .contact {
+  .footer .contact {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -187,17 +185,17 @@ ul {
             align-items: flex-start;
   }
 }
-.contact .contact-title {
+.footer .contact .contact-title {
+  margin: 0;
   font-weight: 400;
   font-size: 32px;
   line-height: 42px;
   letter-spacing: 0.05em;
 }
-.contact .tel {
+.footer .contact .tel {
   padding: 30px 0 15px;
 }
-
-.socials {
+.footer .socials {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -209,8 +207,7 @@ ul {
           align-items: center;
   gap: 10px;
 }
-
-.social-link {
+.footer .social-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,7 +222,10 @@ ul {
   height: 50px;
   border: 1px solid #7B7B7B;
 }
-.social-link:hover {
+.footer .social-link:hover {
   background-color: #7B7B7B;
   color: #fff;
+}
+.footer .text-holder {
+  padding: 0;
 }
