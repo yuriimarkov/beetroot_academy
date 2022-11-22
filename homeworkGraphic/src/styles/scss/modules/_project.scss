@@ -1,0 +1,17 @@
+.project {
+    @include media ('>=1024px') {
+        padding-bottom: 70px;
+    }
+    .title {
+        @include media ('>=768px') {
+            margin-bottom: 50px;
+        }
+    }
+
+    .content {
+        width: 100%;
+        @include media ('>=1024px') {
+            width: 40%;
+        }
+    }
+}
