@@ -1,0 +1,81 @@
+.steps {
+    background-color: $dark-grey;
+    padding: 60px 0;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-holder {
+        display: none;
+
+        @include media ('>=1024px') {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            height: 35px;
+            width: 100%;
+        }
+
+        @include media ('>=1360px') {
+            height: 50px;
+        }
+    }
+
+
+    .card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+        @include media ('>=1024px') {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    .item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        margin: 0 auto;
+
+        @include media ('>=1024px') {
+            width: calc(100% / 3);
+        }
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 96px;
+        height: 96px;
+        background-color: $dark-grey;
+        border-radius: 48px;
+        font-size: 64px;
+        margin-bottom: 4px;
+    }
+
+    .icon-search {
+        color: $blue;
+    }
+
+    .icon-check-circle {
+        color: $red;
+    }
+
+    .icon-thumbs-up {
+        color: $light-blue;
+    }
+
+    .icon-text {
+        font-size: 36px;
+        line-height: 111%;
+    }
+}

@@ -1,0 +1,36 @@
+.footer {
+    padding: 80px 0;
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .heading-holder {
+        padding-bottom: 20px;
+    }
+
+    .pseudo-title {
+        font-family: $secondary-font;
+        line-height: 143%;
+        font-size: 14px;
+        letter-spacing: 0.2em;
+    }
+
+    .social-list {
+        display: flex;
+        gap: 32px;
+        padding: 0;
+    }
+
+    .social-link {
+        font-size: 32px;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+}

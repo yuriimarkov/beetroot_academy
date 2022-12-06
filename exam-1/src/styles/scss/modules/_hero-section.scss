@@ -1,0 +1,130 @@
+.hero-section {
+    margin-top: 84px;
+    padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(../../img/headerBackground.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    min-height: calc(100vh - 84px);
+
+    @include media ('>=768px') {
+        margin-top: 136px;
+        min-height: calc(100vh - 136px);
+    }
+    @include media ('>=1024px') {
+        margin-top: 84px;
+        min-height: calc(100vh - 84px);
+    }
+
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .heading {
+        margin-bottom: 48px;
+        
+        .pseudo-title {
+            display: block;
+            font-size: 18px;
+            font-family: $secondary-font;
+            line-height: 127%;
+            letter-spacing: 0.31em;
+
+            @include media ('>=576px') {
+                font-size: 22px;
+            }
+        }
+    }
+
+    .form-holder {
+        width: 100%;
+        max-width: 540px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include media ('>=768px') {
+            max-width: 647px;
+        }
+    }
+
+    .form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: $white;
+        padding: 4px;
+    }
+
+
+    .input-holder {
+        width: calc(100% - 139px);
+    }
+
+    .input {
+        width: 100%;
+        font-family: $secondary-font;
+        letter-spacing: 0.2em;
+        font-size: 14px;
+        padding: 19px;
+        border: none;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder {
+            text-align: center;
+        }
+    }
+
+
+    .icon-search{
+        padding-right: 10px;
+    }
+
+
+    .scroll-holder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+
+        position: absolute;
+        bottom: 1vh;
+
+        animation: bounce 2s infinite 2s;
+
+        @keyframes bounce {
+            0%,
+            100%,
+            20%,
+            50%,
+            80% {
+              transform: translateY(0);
+            }
+            40% {
+              transform: translateY(-6px);
+            }
+            60% {
+              transform: translateY(-3px);
+            }
+          }
+    }
+
+    .scroll {
+        font-family: $secondary-font;
+        text-transform: none; 
+        line-height: 20px;
+    }
+}

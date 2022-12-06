@@ -1,0 +1,94 @@
+.what-tourist {
+    padding-bottom: 120px;
+    background-image: url(../../img/heroBG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title {
+        padding: 60px 0;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 111%;
+        margin-bottom: 12px;
+    }
+
+    .content {
+        background-color: $dark-grey;
+        @include media ('>=1024px') {
+            display: flex;
+            width: 100%;
+        }
+    }
+
+    .img-holder {
+        width: 100%;
+
+        @include media ('>=1024px') {
+            max-width: 320px;
+        }
+
+        @include media ('>=1360px') {
+            max-width: 380px;
+        }
+
+        @include media ('>=1920px') {
+            max-width: 440px;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .description {
+        margin: 0;
+        padding: 48px 60px;
+
+        @include media ('>=1024px')  {
+            width: calc(100% - 320px);
+        }
+
+        @include media ('>=1360px')  {
+            width: calc(100% - 380px);
+        }
+
+        @include media ('>=1920px')  {
+            width: calc(100% - 440px);
+        }
+    }
+    
+    .description-title {
+        font-family: $secondary-font;
+        padding: 0;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 140%;
+        text-transform: uppercase;
+    }
+
+    .text-holder {
+        display: flex;
+        gap: 10px;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .icon-quote-left {
+        color: $blue;
+        font-size: 20px;
+    }
+}

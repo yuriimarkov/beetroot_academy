@@ -1,0 +1,54 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 213px;
+    height: 60px;
+    color: $white;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    padding: 20px 32px;
+    
+    line-height: 125%;
+    letter-spacing: 0.07em;
+
+    background-color: $blue;
+    border: none;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $btn-trap;
+    }
+
+    &.booking {
+        transition: all ease-in-out 0.9s;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: -28px;
+            transform: rotate(45deg);
+            width: 140px;
+            height: 81px;
+            background-color: $btn-trap;
+            z-index: 1;
+        }
+
+        &:hover {
+            box-shadow: inset 213px 0 0 0 $btn-trap;
+        }
+    }
+
+    &.search-btn {
+        width: 139px;
+        height: 52px;
+        font-size: 14px;
+        line-height: 143%;
+    }
+
+    .btn-text {
+        z-index: 1;
+    }
+}
