@@ -597,16 +597,15 @@ img {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 35px;
-    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 5vh;
+    width: 65%;
   }
 }
 @media (min-width: 1360px) {
   .steps .img-holder {
-    height: 50px;
+    height: 5vh;
   }
 }
 .steps .card {
@@ -667,6 +666,7 @@ img {
   border-radius: 48px;
   font-size: 64px;
   margin-bottom: 4px;
+  border: 3px solid #333;
 }
 .steps .icon-search {
   color: #5373FD;
