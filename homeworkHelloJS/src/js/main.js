@@ -20,7 +20,7 @@ let yourName = prompt('Введіть ваше імя')
 alert(`Привіт, ${yourName}`);
 
 // Запитай рік народження користувача, порахуй його/її вік і виведи результат. Поточний рік вкажи в коді як константу;
-const nowYear = 2022;
+const nowYear = new Date().getFullYear();
 let birthDay = prompt('Ваш рік народження');
 let age = nowYear - birthDay;
 
