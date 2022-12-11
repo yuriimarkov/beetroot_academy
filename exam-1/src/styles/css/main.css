@@ -91,6 +91,20 @@ img {
   }
 }
 
+.main {
+  padding-top: 84px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-top: 136px;
+  }
+}
+@media (min-width: 1024px) {
+  .main {
+    padding-top: 84px;
+  }
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -316,7 +330,6 @@ img {
 }
 
 .hero-section {
-  margin-top: 84px;
   padding-bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -335,13 +348,11 @@ img {
 }
 @media (min-width: 768px) {
   .hero-section {
-    margin-top: 136px;
     min-height: calc(100vh - 136px);
   }
 }
 @media (min-width: 1024px) {
   .hero-section {
-    margin-top: 84px;
     min-height: calc(100vh - 84px);
   }
 }
