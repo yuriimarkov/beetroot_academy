@@ -831,7 +831,7 @@ img {
 }
 .what-tourist .description-title {
   font-family: "Josefin Sans";
-  padding: 0;
+  padding-bottom: 16px;
   font-weight: 400;
   font-size: 20px;
   line-height: 140%;
@@ -841,7 +841,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
 }
 .what-tourist .text-holder p {
   margin: 0;
