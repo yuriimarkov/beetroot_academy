@@ -449,16 +449,6 @@ img {
   padding-right: 10px;
 }
 .hero-section .scroll-holder {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-size: 14px;
   position: absolute;
   bottom: 1vh;
@@ -494,6 +484,16 @@ img {
   }
 }
 .hero-section .scroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Josefin Sans";
   text-transform: none;
   line-height: 20px;
@@ -805,6 +805,7 @@ img {
   }
 }
 .what-tourist .img-holder img {
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -852,6 +853,8 @@ img {
 .what-tourist .icon-quote-left {
   color: #5373FD;
   font-size: 20px;
+  vertical-align: super;
+  padding-right: 10px;
 }
 
 .footer {

@@ -92,11 +92,7 @@
 
 
     .scroll-holder {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         font-size: 14px;
-
         position: absolute;
         bottom: 1vh;
 
@@ -120,6 +116,9 @@
     }
 
     .scroll {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         font-family: $secondary-font;
         text-transform: none; 
         line-height: 20px;

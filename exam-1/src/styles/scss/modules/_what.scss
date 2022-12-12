@@ -42,6 +42,7 @@
         }
 
         img {
+            width: 100%;
             height: 100%;
             object-fit: cover;
         }
@@ -90,5 +91,7 @@
     .icon-quote-left {
         color: $blue;
         font-size: 20px;
+        vertical-align: super;
+        padding-right: 10px;
     }
 }
