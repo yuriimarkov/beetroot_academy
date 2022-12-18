@@ -22,10 +22,25 @@ console.log('Ви можете придбати' + ' ' + chocolateResult.toFixed
 
 // Запитай у користувача тризначне число і виведи його задом наперед. Для вирішення завдання тобі знадобиться оператор % (залишок від ділення).
 let chislo = prompt('Введіть тризначне число');
+let resultat = 0;
+let finalResultat = '';
+
+if (chislo.length >= 3) {
+    while (chislo > 0) {
+        resultat = chislo % 10;
+        chislo = Math.floor(chislo / 10);
+        finalResultat += resultat;
+    }
+    console.log(finalResultat);
+} else {
+    console.log ('Введіть валідне число')
+}
+
+//2 варіант вирішення
 let reverses = chislo.split('');
 console.log(reverses.reverse().join(''));
 
-//
+//Користувач вводить суму вкладу в банк на 2 місяці, з процентною ставкою депозиту 5% річних. Вивести суму нарахованих відсотків.
 let userMoney = prompt('Введіть сумму інвестицій');
 const persentYear = 5;
 const month = 2;
