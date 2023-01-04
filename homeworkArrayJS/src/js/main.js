@@ -64,20 +64,40 @@ const shoppingList = [
 // deleteItemOnList('Apple');
 // console.log(shoppingList);
 
-//Додавання покупки в список. Враховуй, що при додаванні покупки з уже існуючим в списку продуктом, необхідно збільшувати кількість в існуючій покупці, а не додавати нову. При цьому також повинна змінитися сума, наприклад, якщо ціна за одиницю 12, а кількості товарів стало 2, то сума буде 24.
-function addItem(name,price){
-    let takeFlag = 0;
-    shoppingList.forEach((el) => {
-        if(el.name === name ) {
-            el.amout++;
-            el.total += el.price;
-            takeFlag = 1;
-        } 
-    });
-    if (takeFlag === 0) {
-         shoppingList.push({name: name, amout: 1, bought: true, price : price, sum: price, },)
-    }
-}
+// Додавання покупки в список. Враховуй, що при додаванні покупки з уже існуючим в списку продуктом, необхідно збільшувати кількість в існуючій покупці, а не додавати нову. При цьому також повинна змінитися сума, наприклад, якщо ціна за одиницю 12, а кількості товарів стало 2, то сума буде 24.
+// function addItem(name,price){
+//     let takeFlag = 0;
+//     shoppingList.forEach((el) => {
+//         if(el.name === name ) {
+//             el.amout++;
+//             el.total += el.price;
+//             takeFlag = 1;
+//         } 
+//     });
+//     if (takeFlag === 0) {
+//          shoppingList.push({name: name, amout: 1, bought: true, price : price, sum: price, },)
+//     }
+// }
 
-addItem('Vodka',10);
-console.log(shoppingList);
+// addItem('Vodka',10);
+// console.log(shoppingList);
+
+//Підрахунок суми всіх продуктів (враховуючи кількість кожного) в списку.
+function calcAllShopingList() {
+    let result = shoppingList.reduce((accumulator, element) => accumulator + element.amout, 0);
+    console.log(result);
+}
+calcAllShopingList();
+
+// Підрахунок суми всіх (не) придбаних продуктів.
+
+// function calcSumNotBougth(el) {
+//     let sum = 0;
+//     shoppingList.forEach((el) => {
+//         if(el.bought === false) {
+//             sum += el.total;
+//         }
+//     } );
+//     console.log(sum);
+// } 
+// calcSumNotBougth();
