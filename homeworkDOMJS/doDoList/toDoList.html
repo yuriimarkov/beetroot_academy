@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #00BFFF;
+        }
+        .main {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            width: 50%;
+            background-color: #F0F8FF;
+            margin: 0 auto;
+            height: auto;
+            padding: 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid #4169E1;
+            border-radius: 10px;
+        }
+
+        .title {
+            margin: 0;
+            margin-bottom: 10px;
+            color: #1e90ff;
+        }
+
+        .title::after {
+            content: '\270E'
+
+        }
+
+        .form-holder {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form {
+            width: calc((100% - 100px));
+            display: flex;
+            align-items: center;
+            background-color: #F0F8FF;
+            justify-content: space-evenly;
+        }
+
+        .input-holder {
+            width: 100%;
+        }
+
+        .input {
+            width: calc((100% - 55px));
+            letter-spacing: 0.2em;
+            font-size: 14px;
+            padding: 19px;
+            border: 1px solid #87CEFA;
+            border-radius: 10px;
+    }
+        .input::placeholder {
+                text-align: center;
+        }
+        .input:focus {
+            outline: none;
+        }
+        
+        .btn-add {
+            width: 55px;
+            padding: 17px;
+            border: 1px solid #87CEFA;
+            border-radius: 10px;
+            background-color: #1E90FF;
+            color: white;
+            font-size: 18px;
+        }
+        .done {
+            opacity: 0.7;
+        }
+        
+        .remove-btn {
+            display: block;
+            cursor: pointer; 
+            position: relative;
+            width: 20px;
+            height: 20px;
+        }
+        .remove-btn:before, 
+        .remove-btn:after {
+            content: ""; 
+            position: absolute;
+            top: 8px;
+            left: 0; 
+            width: 20px; 
+            height: 4px; 
+            background: white;
+        }
+        .remove-btn:before {transform: rotate(45deg);}
+        .remove-btn:after {transform: rotate(-45deg);}
+
+        .check {
+            margin: 0;
+            width: 20px;
+            height: 20px;
+            padding-right: 25px;
+            cursor: pointer;
+        }
+
+        .out {
+            padding: 0;
+            list-style: none;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .product-list  {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            color: white;
+            background-color: #1e90ff;
+            padding: 10px;
+            border: 1px solid #4169E1;
+            border-radius: 10px;
+        }
+
+        .icon-holder {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+
+        .error {
+            color: red;
+            padding: 10px;
+            border: 1px solid #4169E1;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .error-input {
+            border-color: red;
+
+        }
+
+        .counter  {
+            background-color: #1e90ff;
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main"> 
+        <div class="container">
+            <h1 class="title">Список покупок</h1>
+            <div class="form-holder">
+                <form action="#" class="form">
+                    <div class="input-holder">
+                        <input class="input" type="text">
+                    </div>
+                </form>
+                <button class="btn-add">+</button>
+                <ol class="out">
+                </ol>
+            </div>
+            <div class="error" hidden>Введіть мінімум один символ </div>
+            <div class="counter">Не виконано : 0</div>        
+        </div>
+    </main>
+    <script>
+        let input = document.querySelector('.input');
+        let addProduct = document.querySelector('.btn-add');
+        let out = document.querySelector('.out');
+        let error = document.querySelector('.error');
+        let countOut = document.querySelector('.counter');
+        let counter = 0;
+
+        function toDoList() {
+            if (input.value !== '' ) {
+                error.hidden = true;
+            let list = document.createElement('li')
+            list.classList.add('product-list');
+            list.innerHTML = `
+                <div class='text-holder'>
+                    <span>${input.value}</span>
+                </div>`;
+            let holderIcon = document.createElement('div');
+            holderIcon.classList.add('icon-holder');
+            let check = document.createElement('input');
+            check.setAttribute('type', 'checkbox');
+            check.classList.add('check');
+            counter = ++counter;
+            countOut.innerHTML =`Не виконано : ${counter}`;
+            check.onchange = () => {
+                if (check.checked) {
+                    list.classList.add('done')
+                    counter = --counter;
+                    countOut.innerHTML = `Не виконано : ${counter}`;
+                } else {
+                    list.classList.remove('done')
+                    counter = ++counter;
+                    countOut.innerHTML = `Не виконано : ${counter}`;
+                }
+            }
+
+            let removeBtn = document.createElement('span');
+            removeBtn.classList.add('remove-btn');
+            removeBtn.onclick = () => {
+                list.parentNode.removeChild(list);
+                if(!check.checked) {
+                    countOut.innerHTML = --counter;
+                }
+            }
+
+            list.append(holderIcon);
+            holderIcon.append(check)
+            holderIcon.append(removeBtn);
+            out.append(list)
+            } else 
+            error.hidden = false;
+            input.value = "";
+        }
+
+        addProduct.onclick = toDoList;
+    </script>
+</body>
+
+</html>

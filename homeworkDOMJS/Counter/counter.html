@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            background-color: #4169E1;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+
+        h1,h2 {
+            margin-top: 0;
+        }
+
+        h1 {
+            color: white
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .title {
+            text-align: center;
+            color: white;
+        }
+
+        .btn-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid white;
+            color: white;
+            background-color: transparent;
+            border-radius: 10px;
+            width: 70px;
+            height: 40px;
+            font-size: 20px;
+        }
+
+        .counter {
+            color: white
+        }
+
+        .control {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .coutry {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 10px
+        }
+
+        .contry-item {
+            background-color: #6f8eec;
+            border: 1px solid white;
+            color: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .content {
+            text-align: start;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            gap: 10px
+        }
+
+        strong {
+            padding-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="control">
+                <h1>University</h1>
+                <div class="btn-container">
+                    <button class="btn plus">+</button>
+                    <span class="counter">Кількість відображених елементів: 0</span> 
+                    <button class="btn minus">-</button> 
+                </div>
+            </div>
+            <div class="content">
+                <h2 class="title">University List</h2>
+                <div class="coutry">
+                    <div class="row"></div>
+                </div>
+            </div>
+    </main>
+    <script>
+
+        const arr = [
+  {
+    web_pages: "http://www.academy.sumy.ua/",
+    city: "Sumy",
+    name: "Ukrainian Academy of Banking",
+    country: "Ukraine",
+    site: "academy.sumy.ua",
+  },
+  {
+    web_pages: "http://www.arosmu.org/",
+    city: "Odessa",
+    name: "Odessa State Medical University",
+    country: "Ukraine",
+    site: "arosmu.org",
+  },
+  {
+    web_pages: "http://www.btsau.kiev.ua/",
+    city: "Bila Cerkva",
+    name: "Bila Cerkva State Agrarian University",
+    country: "Ukraine",
+    site: "btsau.kiev.ua",
+  },
+  {
+    web_pages:"http://www.chnu.cv.ua/",
+    city: "Chernivci",
+    name: "Chernivci National University",
+    country: "Ukraine",
+    site: "chnu.cv.ua",
+  },
+  {
+    web_pages: "http://www.crsmu.com/",
+    city: "Crimea",
+    name: "Crimea State Medical University",
+    country: "Ukraine",
+    site: "crsmu.com",
+  },
+];
+
+    
+
+        // 1: не можна виходити в мінус
+        // 2: каунтер не більше кількості єлементів масиву
+        // 3: при натисканні - видаляти юзера
+
+        // Екстра
+        // реалізація корзини
+
+        let minus = document.querySelector('.minus');
+        let plus = document.querySelector('.plus');
+        let contItem = document.querySelector('.counter');
+        let country = document.querySelector('.coutry');
+        let countryItem = [];
+        let counter = 0;;
+
+
+        
+        plus.onclick = () => {
+            if ( counter < arr.length) {
+                ++counter;
+                contItem.innerHTML = `Кількість відображених елементів: ${counter}`;
+                countryItem.push(arr[counter - 1]);
+                country.innerHTML = '';
+                let result = countryItem.forEach((e) => {          
+                                        country.innerHTML += `
+                                            <div class='contry-item'>
+                                                <h2>${e.name}</h2>
+                                                <div class='content'>
+                                                    <span class='city'><strong>Місто:</strong> ${e.city}</span>
+                                                    <span class='country'><strong>Країна:</strong> ${e.country}</span>
+                                                    <a href="${e.web_pages} targer="_blank" class='web-page'><strong>Сайт:</strong> ${e.site} </ф>
+                                                </div>    
+                                            <div>
+                                                `;
+               })
+            }
+            }
+        minus.onclick = () => {
+            if(counter > 0) {
+                --counter;
+                contItem.innerHTML = `Кількість відображених елементів: ${counter}`;
+                countryItem.pop(arr[counter - 1]);
+                country.innerHTML = '';
+                let result = countryItem.forEach((e) => {          
+                                        country.innerHTML += `
+                                            <div class='contry-item'>
+                                                <h2>${e.name}<h2>
+                                                <div class='content'>
+                                                    <span class='city'>${e.city}</span>
+                                                    <span class='country'>${e.country}</span>
+                                                    <a href="${e.web_pages} targer="_blank" class='web-page'>Сайт</ф>
+                                                </div>    
+                                            <div>
+                                                `;
+               })
+        }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    color:black;
+    background-color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+}
+
+.songs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.songList {
+    width: calc(100% /4 - 10px);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-window {
+    display: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+}
+
+.open {
+    display: block;
+}
+
+.paragraph {
+    padding: 10px;
+}
+
+.open-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: green;
+}
+
+.close-btn {
+    position: relative;
+    right: -180px;
+    bottom: -73px;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.close-btn::before {
+    content: '';
+    width: 12px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    top: 13px;
+    left: 9px;
+    transform: rotate(45deg);
+}
+.close-btn::after {
+    content: '';
+    width: 12px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    top: 13px;
+    left: 9px;
+    transform: rotate(-45deg);
+}
+
+.traffic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.traffic-lights {
+    width: 100px;
+    margin-top: 20px;
+    gap: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+.red,
+.yellow,
+.green {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.red.active {
+    background-color: red;
+}
+.yellow.active {
+    background-color: yellow;
+}
+.green.active {
+    background-color: green;
+}
+
+.change-lights {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    color: black;
+    background-color: aqua;
+}
