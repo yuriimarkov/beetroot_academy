@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rick and Morty Characters</title>
+    <link rel="stylesheet" href="./src/style/style.css">
+    <script src="./src/js/main.js" defer></script>
+    <!-- <link rel="stylesheet" href="https://i.icomoon.io/public/temp/ef225b4d14/new/style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+<main class="main">
+   <header class="header">
+    <div class="container">
+        <h1 class="title">Rick and Morty Characters</h1>
+        <nav class="nav">
+            <div class="select-holder">
+                <label for="status">Status: </label>
+                <select class="select-status" id="status">
+                    <option value="all">all</option>
+               </select>
+            </div>
+            <div class="select-holder">
+                <label for="species">Species:</label>
+                 <select class="select-species" name="species" id="species">
+                    <option value="all" class="option">all</option>
+                </select>
+            </div>
+          <div class="select-holder">
+            <label for="search">Search:</label>
+            <input type="search" class="search" id="search">
+          </div>
+        </nav>
+    </div>
+   </header>
+    <section class="movie">
+       <div class="movie__container">
+       </div>
+       <div class="pagination">
+       </div>
+    </section>
+</main>
+</body>
+</html>
