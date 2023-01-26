@@ -14,7 +14,6 @@
         .then(data => data.json())
         .then(data => {
             showSortElement(data)
-            console.log(data)
             createPagination(data)
         })
         .catch((err) => console.log("Error:", err));
@@ -184,8 +183,8 @@
             li.innerHTML = `<span>${i}</span>`
             ul.appendChild(li);
             pagination.append(ul);
-            let listPage = document.querySelectorAll('.pagination__item');
             li.addEventListener('click', e => {
+                let listPage = document.querySelectorAll('.pagination__item');
                 listPage.forEach(e => {
                     e.classList.remove('active');
                 })
@@ -198,8 +197,7 @@
                     .then((data) => showSortElement(data))
                     .catch((err) => console.log("Error:", err));
                 });
-                listPage[0].classList.add('active');
-                console.log(listPage)
+                document.querySelectorAll('.pagination__item')[0].classList.add('active');
             }
             
         }
