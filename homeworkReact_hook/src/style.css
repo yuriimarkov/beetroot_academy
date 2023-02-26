@@ -1,0 +1,56 @@
+body {
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h2 {
+    text-align: center;
+ }
+
+.options {
+    display: flex;
+    gap: 40px;
+}
+
+input,
+select {
+    width: 250px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    color: grey;
+    background-color: aquamarine; 
+}
+
+.rick__serch-container {
+    display: flex;
+    
+}
+
+.rick__container {
+    display: flex;
+    flex-wrap:wrap;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.button {
+    width: 100px;
+    height: 25px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: aquamarine;   
+    cursor: pointer;
+}

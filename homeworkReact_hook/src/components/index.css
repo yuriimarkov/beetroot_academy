@@ -1,0 +1,16 @@
+.rick__cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 5 - 30px);
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: aquamarine;
+}
+
+.rick__cart-img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 10px;
+}
